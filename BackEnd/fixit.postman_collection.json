@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "648a3734-2b4b-4fdb-a3f5-d8802f7ca21c",
+		"name": "fixit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"muhamid22\",\r\n    \"number\": \"0332333\",\r\n    \"email\": \"hamza@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"geometry\": {\r\n        \"coordinates\": [\r\n            24.883789,\r\n            67.083987\r\n        ]\r\n    },\r\n    \"WorkerProfession\":\"plumbing\",\r\n    \"role\": \"worker\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"customer\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "WorkerProfession",
+							"value": "plumbing",
+							"type": "text"
+						},
+						{
+							"key": "quotedAmount",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "customerId",
+							"value": "627becfc510e4a42b943bad4",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "nalka theek krna hai",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Muhamid Documents/Final Year Project/other files and link/Har Kaam Ghr Bhetay (1).png"
+						},
+						{
+							"key": "name",
+							"value": "muhamid",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "24.883176",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "67.083107",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/task/addTask",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"addTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Bid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ahmed\",\r\n    \"address\":\"asdjskadjsa\",\r\n    \"taskId\":\"627c07afbec580bd8f7bf614\",\r\n    \"text\":\"dslakjdlsakdjsa\",\r\n    \"BidAmmount\":299\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/task/addBid",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"addBid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add equipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\": \"627c1a90834107bf25746aaa\",\r\n    \"additionalEquipment\": {\r\n        \"name\": \"sjdjsad\",\r\n        \"price\": 231\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/task/addEquipment",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"addEquipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show equipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskId\":\"627c1a90834107bf25746aaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/task/showEquipment",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"showEquipment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
